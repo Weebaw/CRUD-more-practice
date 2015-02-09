@@ -1,0 +1,21 @@
+<h1>Welcome!</h1>
+
+<p>
+  add a link to Events here...
+  <%= link_to "Create Note", new_note_path %>
+</p>
+
+<%= @notes.each do |note| %>
+<p>
+  <b>Note Date</b> <%= note.date %>
+  <b>Note Location</b> <%= note.location %>
+  <b>Note Description</b> <%= note.description %>
+  <b>Note Capacity</b> <%= note.capacity %>
+  <b>Note Requires ID</b> <%= note.requires_id %>
+
+<%= link_to "Show", note_path(note[:id]) %>
+<%= link_to "Edit", edit_note_path(note[:id]) %>
+<%= link_to "Delete", note_path(note[:id]), method: :delete, data: {confirm: "Fo Reals?"} %>
+
+</p>
+ <% end %>

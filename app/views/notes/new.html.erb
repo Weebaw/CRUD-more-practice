@@ -1,0 +1,20 @@
+<h1>Create a new note</h1>
+    <%= form_for @note do |f| %>
+
+    <%= f.label :date %>
+    <%= f.date_field :date %>
+
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+
+    <%= f.label :capacity %>
+    <%= f.number_field :capacity %>
+
+    <%= f.label :name, 'Requires ID'%>
+    <%= f.check_box :requires_id %>
+
+    <%= f.submit "Note that shit!"%>
+    <% end %>

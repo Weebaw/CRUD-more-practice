@@ -1,0 +1,10 @@
+<h1>Note Show Page</h1>
+
+<p>Date: <%= @note.date %></p>
+<p>Description: <%= @note.description %></p>
+<p>Location: <%= @note.location %></p>
+<p>Capacity: <%= @note.capacity %></p>
+<p>Requires ID: <%= @note.requires_id %></p>
+
+<%= link_to "Edit", edit_note_path %>
+<%= link_to "Delete", note_path(@note), method: :delete, data: {confirm:"Are you sure?"} %>
